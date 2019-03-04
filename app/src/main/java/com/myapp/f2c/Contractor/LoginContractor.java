@@ -10,7 +10,6 @@ public interface LoginContractor {
     void onLoginSuccess(AccountDataModel dataModel);
 
     void onLoginFail(F2CError error);
-
   }
 
   interface LoginActionListener {
