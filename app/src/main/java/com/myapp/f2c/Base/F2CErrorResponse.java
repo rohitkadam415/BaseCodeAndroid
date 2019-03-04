@@ -6,15 +6,8 @@ import android.os.Parcelable;
 import com.myapp.f2c.Model.EmptyData;
 import com.myapp.f2c.Model.F2CError;
 
-/**
- * @author Rafique Mujawar
- * Date 12-09-2018
- */
 public class F2CErrorResponse extends F2CBaseResponse implements Parcelable {
   private EmptyData data;
-
-  public F2CErrorResponse() {
-  }
 
   public EmptyData getData() {
     return data;
@@ -37,7 +30,7 @@ public class F2CErrorResponse extends F2CBaseResponse implements Parcelable {
     dest.writeParcelable(this.error, flags);
   }
 
-  F2CErrorResponse(Parcel in) {
+  private F2CErrorResponse(Parcel in) {
     super(in);
     this.data = in.readParcelable(EmptyData.class.getClassLoader());
     this.status = in.readByte() != 0;

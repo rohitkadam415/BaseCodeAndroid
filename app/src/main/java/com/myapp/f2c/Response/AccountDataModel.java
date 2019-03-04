@@ -7,7 +7,7 @@ public class AccountDataModel implements Parcelable {
   private String token;
   private String min_supported_version;
 
-  protected AccountDataModel(Parcel in) {
+  private AccountDataModel(Parcel in) {
     token = in.readString();
     min_supported_version = in.readString();
   }

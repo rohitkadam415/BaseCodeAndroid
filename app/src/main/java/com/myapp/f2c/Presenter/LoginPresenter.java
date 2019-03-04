@@ -1,15 +1,15 @@
 package com.myapp.f2c.Presenter;
 
-import com.myapp.f2c.Callback.LoginCallback;
-import com.myapp.f2c.Model.F2CError;
 import com.myapp.f2c.Apiservice.LoginService;
 import com.myapp.f2c.Base.ExecuteInterface;
+import com.myapp.f2c.Callback.LoginCallback;
 import com.myapp.f2c.Contractor.LoginContractor;
+import com.myapp.f2c.Model.F2CError;
 import com.myapp.f2c.Request.LoginSignUpRequest;
 import com.myapp.f2c.Response.AccountDataModel;
 
 public class LoginPresenter implements LoginContractor.LoginActionListener, LoginCallback {
-  LoginContractor.LoginView loginView;
+  private LoginContractor.LoginView loginView;
   private ExecuteInterface<LoginSignUpRequest> mService;
 
   public LoginPresenter(LoginContractor.LoginView loginView) {

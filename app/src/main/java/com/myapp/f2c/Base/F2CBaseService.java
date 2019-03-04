@@ -4,8 +4,8 @@ import android.support.annotation.NonNull;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
-import com.myapp.f2c.Model.F2CError;
 import com.myapp.f2c.Constant.F2CErrorConstant;
+import com.myapp.f2c.Model.F2CError;
 
 import java.io.IOException;
 import java.net.SocketTimeoutException;
@@ -16,12 +16,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-/**
- * @author Rafique Mujawar
- * Date 07-09-2018
- */
 public abstract class F2CBaseService<DATA, REQUEST> implements ExecuteInterface<REQUEST> {
-  protected final String TAG = this.getClass().getSimpleName();
 
   protected void filterCall(Call<F2CResponse<DATA>> call) {
     call.enqueue(new Callback<F2CResponse<DATA>>() {

@@ -1,9 +1,6 @@
 package com.myapp.f2c.Constant;
 
-/**
- * @author Rafique Mujawar
- * Date 12-09-2018
- */
+
 public enum F2CErrorCode {
   ERROR116("ERROR116", "Invalid Username or Password format. Username must " +
       "consist of at least of 3 charaters and maximum of 50 characters. Password must consist of at least 6 characters and maximum of 20 characters. Username/Password should not contain white spaces."),

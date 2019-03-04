@@ -7,7 +7,7 @@ public class LoginSignUpRequest implements Parcelable {
   private String username;
   private String password;
 
-  protected LoginSignUpRequest(Parcel in) {
+  private LoginSignUpRequest(Parcel in) {
     username = in.readString();
     password = in.readString();
   }
@@ -38,16 +38,8 @@ public class LoginSignUpRequest implements Parcelable {
     dest.writeString(password);
   }
 
-  public String getUsername() {
-    return username;
-  }
-
   public void setUsername(String username) {
     this.username = username;
-  }
-
-  public String getPassword() {
-    return password;
   }
 
   public void setPassword(String password) {

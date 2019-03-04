@@ -21,10 +21,6 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 
-/**
- * @author Rafique Mujawar
- * Date 13-08-2018
- */
 public class F2CSessionManager {
   private static final int REQUEST_TIMEOUT = 75;
   private static final long MAX_CATCH_SIZE = (10 * 1024 * 1024);//10MB
@@ -100,13 +96,6 @@ public class F2CSessionManager {
     Cache cache = new Cache(BaseF2CApplication.getF2CContext().getCacheDir(), MAX_CATCH_SIZE);
     builder.cache(cache);
     return builder.build();
-  }
-
-  public void addRequestInterceptor() {
-    Retrofit.Builder builder = new Retrofit.Builder();
-    builder.client(getOkHttpClient());
-    builder.addConverterFactory(GsonConverterFactory.create());
-    sessionManager.restAdapter = builder.baseUrl(baseUrl).build();
   }
 
   private Interceptor getRequestInterceptor() {

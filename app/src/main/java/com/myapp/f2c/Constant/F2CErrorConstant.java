@@ -1,9 +1,5 @@
 package com.myapp.f2c.Constant;
 
-/**
- * @author Rafique Mujawar
- * Date 11-09-2018
- */
 public class F2CErrorConstant {
   public static final String ERROR_TIME_OUT = "TIME_OUT";
   public static final String ERROR_NETWORK = "ERROR_NETWORK";

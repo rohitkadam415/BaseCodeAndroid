@@ -1,9 +1,5 @@
 package com.myapp.f2c.Constant;
 
-/**
- * @author Rafique Mujawar
- * Date 13-08-2018
- */
 public class APIConstants {
 
 
