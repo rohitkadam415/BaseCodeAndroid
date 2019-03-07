@@ -4,15 +4,15 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
+import com.myapp.f2c.Contractor.LoginContractor;
 import com.myapp.f2c.Contractor.LoginContractor.LoginActionListener;
 import com.myapp.f2c.Model.F2CError;
 import com.myapp.f2c.Presenter.LoginPresenter;
-import com.myapp.f2c.Contractor.LoginContractor;
-import com.myapp.f2c.Response.AccountDataModel;
+import com.myapp.f2c.Response.LoginResponseModel;
 
 public class MainActivity extends AppCompatActivity implements LoginContractor.LoginView {
 
-  private static final String TAG = MainActivity.class.getCanonicalName();
+  private static final String TAG = MainActivity.class.getSimpleName();
   LoginActionListener loginActionListener;
 
   @Override
@@ -20,12 +20,12 @@ public class MainActivity extends AppCompatActivity implements LoginContractor.L
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     loginActionListener = new LoginPresenter(this);
-    loginActionListener.login("rafique", "Pas@12");
+    loginActionListener.login("de", "Pass@12");
   }
 
   @Override
-  public void onLoginSuccess(AccountDataModel dataModel) {
-    Log.i(TAG, "onLoginSuccess: " + dataModel.toString());
+  public void onLoginSuccess(LoginResponseModel dataModel) {
+    Log.i(TAG, "onLoginSuccess: ");
   }
 
   @Override

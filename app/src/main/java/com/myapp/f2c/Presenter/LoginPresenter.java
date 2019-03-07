@@ -6,7 +6,7 @@ import com.myapp.f2c.Callback.LoginCallback;
 import com.myapp.f2c.Contractor.LoginContractor;
 import com.myapp.f2c.Model.F2CError;
 import com.myapp.f2c.Request.LoginSignUpRequest;
-import com.myapp.f2c.Response.AccountDataModel;
+import com.myapp.f2c.Response.LoginResponseModel;
 
 public class LoginPresenter implements LoginContractor.LoginActionListener, LoginCallback {
   private LoginContractor.LoginView loginView;
@@ -26,7 +26,7 @@ public class LoginPresenter implements LoginContractor.LoginActionListener, Logi
   }
 
   @Override
-  public void onLoginSuccess(AccountDataModel model) {
+  public void onLoginSuccess(LoginResponseModel model) {
     loginView.onLoginSuccess(model);
   }
 

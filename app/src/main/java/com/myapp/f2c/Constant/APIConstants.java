@@ -5,7 +5,8 @@ public class APIConstants {
 
   /*Account APIs*/
 
-  public static final String URL_LOGIN = "account/signin/";
+  public static final String URL_LOGIN = "account/login/";
+  public static final String URL_REGISTER = "account/register/";
 
   /**
    * Default Header Keys

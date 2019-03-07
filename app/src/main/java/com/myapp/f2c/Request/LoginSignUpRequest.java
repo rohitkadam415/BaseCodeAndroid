@@ -4,12 +4,12 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class LoginSignUpRequest implements Parcelable {
-  private String username;
-  private String password;
+  private String Username;
+  private String Password;
 
   private LoginSignUpRequest(Parcel in) {
-    username = in.readString();
-    password = in.readString();
+    Username = in.readString();
+    Password = in.readString();
   }
 
   public LoginSignUpRequest() {
@@ -34,15 +34,15 @@ public class LoginSignUpRequest implements Parcelable {
 
   @Override
   public void writeToParcel(Parcel dest, int flags) {
-    dest.writeString(username);
-    dest.writeString(password);
+    dest.writeString(Username);
+    dest.writeString(Password);
   }
 
   public void setUsername(String username) {
-    this.username = username;
+    this.Username = username;
   }
 
   public void setPassword(String password) {
-    this.password = password;
+    this.Password = password;
   }
 }

@@ -1,7 +1,7 @@
 package com.myapp.f2c.Callback;
 
-import com.myapp.f2c.Response.AccountDataModel;
+import com.myapp.f2c.Response.LoginResponseModel;
 
 public interface LoginCallback extends BaseAPIErrorCallback {
-  void onLoginSuccess(AccountDataModel model);
+  void onLoginSuccess(LoginResponseModel model);
 }

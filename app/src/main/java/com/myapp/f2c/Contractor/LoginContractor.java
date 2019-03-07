@@ -2,12 +2,12 @@ package com.myapp.f2c.Contractor;
 
 import com.myapp.f2c.Model.F2CError;
 import com.myapp.f2c.Presenter.Base.PresenterView;
-import com.myapp.f2c.Response.AccountDataModel;
+import com.myapp.f2c.Response.LoginResponseModel;
 
 public interface LoginContractor {
 
   interface LoginView extends PresenterView {
-    void onLoginSuccess(AccountDataModel dataModel);
+    void onLoginSuccess(LoginResponseModel dataModel);
 
     void onLoginFail(F2CError error);
   }

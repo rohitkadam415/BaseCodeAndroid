@@ -4,12 +4,18 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class AccountDataModel implements Parcelable {
-  private String token;
-  private String min_supported_version;
+  private String Id;
+  private String Username;
+  private String Password;
+  private String IsVerified;
+  private String UsertypeId;
 
-  private AccountDataModel(Parcel in) {
-    token = in.readString();
-    min_supported_version = in.readString();
+  protected AccountDataModel(Parcel in) {
+    Id = in.readString();
+    Username = in.readString();
+    Password = in.readString();
+    IsVerified = in.readString();
+    UsertypeId = in.readString();
   }
 
   public static final Creator<AccountDataModel> CREATOR = new Creator<AccountDataModel>() {
@@ -31,7 +37,10 @@ public class AccountDataModel implements Parcelable {
 
   @Override
   public void writeToParcel(Parcel dest, int flags) {
-    dest.writeString(token);
-    dest.writeString(min_supported_version);
+    dest.writeString(Id);
+    dest.writeString(Username);
+    dest.writeString(Password);
+    dest.writeString(IsVerified);
+    dest.writeString(UsertypeId);
   }
 }

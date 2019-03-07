@@ -25,11 +25,7 @@ public class F2CSessionManager {
   private static final int REQUEST_TIMEOUT = 75;
   private static final long MAX_CATCH_SIZE = (10 * 1024 * 1024);//10MB
   private volatile static F2CSessionManager sessionManager = null;
-  //private static String baseUrl = "https://echomeapi.herokuapp.com/v1/";
-  private static final String baseUrl = "https://apiechomedev.herokuapp.com/v1/";
-  //private static String baseUrl = "https://apiechomestaging.herokuapp.com/v1/";
-  //private static String baseUrl = "http://10.33.2.169:3000/v1/";
-  //private static String baseUrl = "http://10.33.2.166:3000/v1/";
+  private static final String baseUrl = "https://apif2c.herokuapp.com/";
   private Retrofit restAdapter;
   private String accessToken;
   private String userID;

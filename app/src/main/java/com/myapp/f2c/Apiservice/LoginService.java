@@ -8,12 +8,13 @@ import com.myapp.f2c.Base.F2CResponse;
 import com.myapp.f2c.Manager.F2CSessionManager;
 import com.myapp.f2c.Request.LoginSignUpRequest;
 import com.myapp.f2c.Response.AccountDataModel;
+import com.myapp.f2c.Response.LoginResponseModel;
 
 import java.io.IOException;
 
 import retrofit2.Call;
 
-public class LoginService extends F2CBaseService<AccountDataModel, LoginSignUpRequest> {
+public class LoginService extends F2CBaseService<LoginResponseModel, LoginSignUpRequest> {
   private final LoginCallback callback;
 
   public LoginService(LoginCallback callback) {
@@ -22,7 +23,7 @@ public class LoginService extends F2CBaseService<AccountDataModel, LoginSignUpRe
 
 
   @Override
-  protected void onF2CResponse(AccountDataModel accountDataModel) {
+  protected void onF2CResponse(LoginResponseModel accountDataModel) {
     callback.onLoginSuccess(accountDataModel);
   }
 
@@ -38,7 +39,7 @@ public class LoginService extends F2CBaseService<AccountDataModel, LoginSignUpRe
 
   @Override
   public void executeService(LoginSignUpRequest loginSignUpRequest) {
-    Call<F2CResponse<AccountDataModel>> call = null;
+    Call<F2CResponse<LoginResponseModel>> call = null;
     try {
       call = F2CSessionManager.getSessionManager()
           .getRestAdapter().create(LoginAPI.class).getAccessToken(loginSignUpRequest);
