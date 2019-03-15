@@ -33,4 +33,8 @@ public class LoginResponseModel implements Parcelable {
   public void writeToParcel(Parcel dest, int flags) {
     dest.writeTypedList(userlogin);
   }
+
+  public List<AccountDataModel> getUserlogin() {
+    return userlogin;
+  }
 }

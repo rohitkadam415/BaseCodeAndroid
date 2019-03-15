@@ -43,4 +43,8 @@ public class AccountDataModel implements Parcelable {
     dest.writeString(IsVerified);
     dest.writeString(UsertypeId);
   }
+
+  public String getId() {
+    return Id;
+  }
 }

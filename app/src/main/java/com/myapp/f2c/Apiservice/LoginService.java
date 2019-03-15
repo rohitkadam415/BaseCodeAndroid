@@ -1,13 +1,12 @@
 package com.myapp.f2c.Apiservice;
 
 import com.myapp.f2c.API.LoginAPI;
-import com.myapp.f2c.Callback.LoginCallback;
-import com.myapp.f2c.Model.F2CError;
 import com.myapp.f2c.Base.F2CBaseService;
 import com.myapp.f2c.Base.F2CResponse;
+import com.myapp.f2c.Callback.LoginCallback;
 import com.myapp.f2c.Manager.F2CSessionManager;
+import com.myapp.f2c.Model.F2CError;
 import com.myapp.f2c.Request.LoginSignUpRequest;
-import com.myapp.f2c.Response.AccountDataModel;
 import com.myapp.f2c.Response.LoginResponseModel;
 
 import java.io.IOException;
@@ -24,6 +23,14 @@ public class LoginService extends F2CBaseService<LoginResponseModel, LoginSignUp
 
   @Override
   protected void onF2CResponse(LoginResponseModel accountDataModel) {
+    try {
+      F2CSessionManager.getSessionManager()
+          .setUserID(accountDataModel.getUserlogin().get(0).getId());
+      F2CSessionManager.getSessionManager().addRequestInterceptor();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+
     callback.onLoginSuccess(accountDataModel);
   }
 

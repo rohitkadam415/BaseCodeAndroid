@@ -94,6 +94,13 @@ public class F2CSessionManager {
     return builder.build();
   }
 
+  public void addRequestInterceptor() {
+    Retrofit.Builder builder = new Retrofit.Builder();
+    builder.client(getOkHttpClient());
+    builder.addConverterFactory(GsonConverterFactory.create());
+    sessionManager.restAdapter = builder.baseUrl(baseUrl).build();
+  }
+
   private Interceptor getRequestInterceptor() {
 
     return new Interceptor() {
