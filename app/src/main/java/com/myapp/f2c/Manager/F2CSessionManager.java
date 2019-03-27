@@ -25,7 +25,7 @@ public class F2CSessionManager {
   private static final int REQUEST_TIMEOUT = 75;
   private static final long MAX_CATCH_SIZE = (10 * 1024 * 1024);//10MB
   private volatile static F2CSessionManager sessionManager = null;
-  private static final String baseUrl = "https://apif2c.herokuapp.com/";
+  private static final String baseUrl = "";
   private Retrofit restAdapter;
   private String accessToken;
   private String userID;
