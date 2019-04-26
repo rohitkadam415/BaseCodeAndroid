@@ -21,5 +21,6 @@ public class APIConstants {
    */
   public static final String HEADER_VALUE_CONTENT_TYPE = "application/json";
 
+  public static final String URL_DEVICE_REGISTRATION = "";
 }
 
