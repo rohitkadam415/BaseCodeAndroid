@@ -17,7 +17,7 @@ public interface F2CConstants {
   String PASSWORD_PATTERN = "((?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%])(?=\\S+$).{6,20})";
   String REGEX_MOBILE_NUMBER = "[^0-9]+";
   String EMPTY_STRING = "";
-  String ECHOME_SHARED_PREFERENCES = "ECHOME_SHARED_PREFERENCES";
+  String F2C_SHARED_PREFERENCES = "F2C_SHARED_PREFERENCES";
   String ARG_INTEGRATION_URL = "ARG_INTEGRATION_URL";
   String ARG_ARTIST_URL = "ARG_ARTIST_URL";
   String PARAM_STATUS = "status";
@@ -59,16 +59,11 @@ public interface F2CConstants {
   String KEY_TOKEN = "token";
   String KEY_USERID = "userid";
   String SORT_ORDER_CONTACT = " ASC";
-  String DOMAIN_URI = "https://echome.page.link/";
-  String DYNAMIC_LINK = "https://apiechomedev.herokuapp.com/?invitedby=";
-  String IOS_BUNDLE_ID = "com.example.ios";
   String KEY_REMOVE_IMAGE = "remove_image";
   String MORE = " more";
   String PROFILE_IAMGE = "profileImages/";
   CharSequence MEDIA_SESSION = "mediasession";
   String MEDIA_SESSION_MEDIAPLAYER = "MediaSession and MediaPlayer";
-  String CLIENT_ID = "a07de8ce17404177a66c36cbf53567ee";
-  String SPOTIFY_TRACK_DELIVERY_DONE = "kSpPlaybackNotifyAudioDeliveryDone";
   String JPG_EXTENSION = ".jpg";
   String PROVIDER = ".provider";
   String IMAGE_FOLDER = "/EchomeProfile/";
@@ -103,4 +98,7 @@ public interface F2CConstants {
   int ONE = 1;
   String DECIMAL_FORMAT = ".#";
 
+  interface RequestCodes {
+    int ROUNDEDSQUARE_RADIUS = 15;
+  }
 }
