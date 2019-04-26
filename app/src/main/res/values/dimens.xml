@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="d8dp">8dp</dimen>
+    <dimen name="d16dp">16dp</dimen>
+    <dimen name="contact_image_height">80dp</dimen>
+    <dimen name="contact_image_width">80dp</dimen>
+    <dimen name="d2dp">2dp</dimen>
+    <dimen name="s12sp">12sp</dimen>
+</resources>
