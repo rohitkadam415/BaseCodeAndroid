@@ -1,4 +1,4 @@
-package com.myapp.f2c.Base;
+package com.myapp.common.Base;
 
 import android.app.Application;
 

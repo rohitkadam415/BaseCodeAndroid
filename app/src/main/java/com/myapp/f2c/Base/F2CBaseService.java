@@ -4,7 +4,7 @@ import android.support.annotation.NonNull;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
-import com.myapp.f2c.Constant.F2CErrorConstant;
+import com.myapp.common.Constant.F2CErrorConstant;
 import com.myapp.f2c.Model.F2CError;
 
 import java.io.IOException;

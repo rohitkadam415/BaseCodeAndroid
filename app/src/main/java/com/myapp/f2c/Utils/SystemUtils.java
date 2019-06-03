@@ -3,10 +3,9 @@ package com.myapp.f2c.Utils;
 import android.content.Context;
 import android.os.Build;
 import android.provider.Settings;
-import android.provider.SyncStateContract;
 
 import com.myapp.f2c.BuildConfig;
-import com.myapp.f2c.Constant.F2CConstants;
+import com.myapp.common.Constant.F2CConstants;
 import com.myapp.f2c.Request.RegisterDeviceRequest;
 import com.myapp.f2c.application.F2CApplication;
 

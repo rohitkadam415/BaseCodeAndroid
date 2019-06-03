@@ -7,7 +7,7 @@ import com.bumptech.glide.RequestBuilder;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.bumptech.glide.request.RequestOptions;
-import com.myapp.f2c.Constant.F2CConstants;
+import com.myapp.common.Constant.F2CConstants;
 import com.myapp.f2c.R;
 import com.myapp.f2c.application.F2CApplication;
 

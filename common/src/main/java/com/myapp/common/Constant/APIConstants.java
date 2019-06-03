@@ -1,4 +1,4 @@
-package com.myapp.f2c.Constant;
+package com.myapp.common.Constant;
 
 public class APIConstants {
 

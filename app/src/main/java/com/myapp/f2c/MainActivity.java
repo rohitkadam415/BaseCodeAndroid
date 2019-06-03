@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-import com.myapp.f2c.Constant.F2CConstants;
+import com.myapp.common.Constant.F2CConstants;
 import com.myapp.f2c.Contractor.LoginContractor;
 import com.myapp.f2c.Contractor.LoginContractor.LoginActionListener;
 import com.myapp.f2c.Model.F2CError;

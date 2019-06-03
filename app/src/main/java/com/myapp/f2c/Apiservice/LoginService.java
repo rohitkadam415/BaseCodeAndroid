@@ -4,7 +4,7 @@ import com.myapp.f2c.API.LoginAPI;
 import com.myapp.f2c.Base.F2CBaseService;
 import com.myapp.f2c.Base.F2CResponse;
 import com.myapp.f2c.Callback.LoginCallback;
-import com.myapp.f2c.Manager.F2CSessionManager;
+import com.myapp.common.Manager.F2CSessionManager;
 import com.myapp.f2c.Model.F2CError;
 import com.myapp.f2c.Request.LoginSignUpRequest;
 import com.myapp.f2c.Response.LoginResponseModel;

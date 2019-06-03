@@ -1,7 +1,7 @@
 package com.myapp.f2c.API;
 
 import com.myapp.f2c.Base.F2CResponse;
-import com.myapp.f2c.Constant.APIConstants;
+import com.myapp.common.Constant.APIConstants;
 import com.myapp.f2c.Request.LoginSignUpRequest;
 import com.myapp.f2c.Response.LoginResponseModel;
 

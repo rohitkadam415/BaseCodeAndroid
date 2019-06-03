@@ -3,7 +3,7 @@ package com.myapp.f2c.Utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.myapp.f2c.Constant.F2CConstants;
+import com.myapp.common.Constant.F2CConstants;
 
 import java.util.HashMap;
 

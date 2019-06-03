@@ -1,11 +1,12 @@
-package com.myapp.f2c.Manager;
+package com.myapp.common.Manager;
 
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.myapp.f2c.Base.BaseF2CApplication;
-import com.myapp.f2c.Constant.APIConstants;
+
+import com.myapp.common.Base.BaseF2CApplication;
+import com.myapp.common.Constant.APIConstants;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -16,6 +17,7 @@ import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

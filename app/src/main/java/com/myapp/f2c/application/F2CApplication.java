@@ -6,7 +6,7 @@ import com.crashlytics.android.Crashlytics;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
-import com.myapp.f2c.Base.BaseF2CApplication;
+import com.myapp.common.Base.BaseF2CApplication;
 import com.myapp.f2c.Contractor.RegisterDeviceContractor;
 import com.myapp.f2c.Model.F2CError;
 import com.myapp.f2c.Presenter.RegisterDevicePresenter;

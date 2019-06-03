@@ -1,4 +1,4 @@
-package com.myapp.f2c.Constant;
+package com.myapp.common.Constant;
 
 public class F2CErrorConstant {
   public static final String ERROR_TIME_OUT = "TIME_OUT";
