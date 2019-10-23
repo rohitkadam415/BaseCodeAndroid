@@ -14,12 +14,6 @@ public interface ToolbarSetUpListener {
    */
   void setUpToolbar(String title, int titleImage, int primaryImage, int secondaryImage);
 
-  /**
-   * Method to add toggle button on tool bar
-   * @param isOn to set if toggle is on
-   * @param isVisibleStatus
-   */
-  void addToggleOnToolbar(boolean isOn, boolean isVisibleStatus);
 
   /**
    * Method to add search layout to tool bar.

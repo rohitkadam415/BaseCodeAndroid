@@ -6,8 +6,9 @@ import android.provider.Settings;
 
 import com.myapp.f2c.BuildConfig;
 import com.myapp.common.Constant.F2CConstants;
-import com.myapp.f2c.Request.RegisterDeviceRequest;
+
 import com.myapp.f2c.application.F2CApplication;
+import com.myapp.model.Request.RegisterDeviceRequest;
 
 import java.lang.reflect.Field;
 

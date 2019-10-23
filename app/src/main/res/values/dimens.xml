@@ -6,4 +6,7 @@
     <dimen name="contact_image_width">80dp</dimen>
     <dimen name="d2dp">2dp</dimen>
     <dimen name="s12sp">12sp</dimen>
+    <dimen name="echome_toolbar_height">48dp</dimen>
+    <dimen name="d5dp">5dp</dimen>
+    <dimen name="s22sp">22sp</dimen>
 </resources>

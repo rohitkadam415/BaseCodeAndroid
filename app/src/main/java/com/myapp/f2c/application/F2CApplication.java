@@ -2,16 +2,17 @@ package com.myapp.f2c.application;
 
 import android.util.Log;
 
+
 import com.crashlytics.android.Crashlytics;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 import com.myapp.common.Base.BaseF2CApplication;
-import com.myapp.f2c.Contractor.RegisterDeviceContractor;
-import com.myapp.f2c.Model.F2CError;
-import com.myapp.f2c.Presenter.RegisterDevicePresenter;
-import com.myapp.f2c.Request.RegisterDeviceRequest;
+import com.myapp.common.Model.F2CError;
 import com.myapp.f2c.Utils.SystemUtils;
+import com.myapp.model.Request.RegisterDeviceRequest;
+import com.myapp.presenter.Contractor.RegisterDeviceContractor;
+import com.myapp.presenter.Presenter.RegisterDevicePresenter;
 
 import io.fabric.sdk.android.Fabric;
 

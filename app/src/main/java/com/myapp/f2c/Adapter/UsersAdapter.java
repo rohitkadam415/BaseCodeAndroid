@@ -3,7 +3,6 @@ package com.myapp.f2c.Adapter;
 import android.annotation.SuppressLint;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Filter;
@@ -11,8 +10,7 @@ import android.widget.Filterable;
 
 import com.myapp.f2c.Model.RecentChatUsermodel;
 import com.myapp.f2c.R;
-import com.myapp.f2c.Utils.F2CImageUtils;
-import com.myapp.f2c.ViewHolder.UsersViewHolder;
+import com.myapp.f2c.ViewHolders.UsersViewHolder;
 
 import java.util.ArrayList;
 import java.util.List;

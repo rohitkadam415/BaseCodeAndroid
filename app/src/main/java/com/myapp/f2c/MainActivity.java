@@ -4,16 +4,17 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.myapp.common.Constant.F2CConstants;
-import com.myapp.f2c.Contractor.LoginContractor;
-import com.myapp.f2c.Contractor.LoginContractor.LoginActionListener;
-import com.myapp.f2c.Model.F2CError;
-import com.myapp.f2c.Presenter.LoginPresenter;
-import com.myapp.f2c.Response.LoginResponseModel;
+import com.myapp.common.Model.F2CError;
+import com.myapp.common.Response.LoginResponseModel;
 import com.myapp.f2c.ottoeventbus.BusProvider;
 import com.myapp.f2c.ottoeventbus.testEvent;
+import com.myapp.presenter.Contractor.LoginContractor.LoginActionListener;
+import com.myapp.presenter.Contractor.LoginContractor.LoginView;
+import com.myapp.presenter.Presenter.LoginPresenter;
 import com.squareup.otto.Subscribe;
 
-public class MainActivity extends F2CActivity implements LoginContractor.LoginView {
+
+public class MainActivity extends F2CActivity implements LoginView {
 
   private static final String TAG = MainActivity.class.getSimpleName();
   LoginActionListener loginActionListener;
@@ -24,10 +25,8 @@ public class MainActivity extends F2CActivity implements LoginContractor.LoginVi
     setContentView(R.layout.activity_main);
     loginActionListener = new LoginPresenter(this);
     loginActionListener.login("de", "Pass@12");
-    //initToolbar();
-    // setUpToolbar(getString(R.string.label_profile), 0, R.drawable.ic_back_arrow_grey, 0);
-
-  //  setUpToolbar(null, R.mipmap.ic_launcher, R.mipmap.ic_launcher, R.mipmap.ic_launcher);
+    initToolbar();
+    setUpToolbar(getString(R.string.app_name), 0, R.drawable.ic_arrow_back_black_24dp, 0);
   }
 
   @Override

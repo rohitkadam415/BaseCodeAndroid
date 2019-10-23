@@ -3,14 +3,15 @@ package com.myapp.f2c;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.SwitchCompat;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.myapp.common.Constant.F2CConstants;
 import com.myapp.f2c.listener.ToolbarSetUpListener;
 
 
@@ -23,9 +24,8 @@ public abstract class F2CActivity extends AppCompatActivity implements ToolbarSe
   final String TAG = this.getClass().getSimpleName();
 
   Toolbar mToolbar;
-  ImageView mPrimaryButton, mSecondaryButton, mProfileImageview;
-  TextView mToolbarTitle, mTvToggleButtonStatus;
-  SwitchCompat mToggleButton;
+  ImageView mPrimaryButton, mSecondaryButton;
+  TextView mToolbarTitle;
   private ProgressBar progressBar;
 
   @Override
@@ -37,13 +37,10 @@ public abstract class F2CActivity extends AppCompatActivity implements ToolbarSe
    * Method to init tool bar before using it
    */
   void initToolbar() {
-//    mToolbar = findViewById(R.id.echome_toolbar);
-//    mPrimaryButton = findViewById(R.id.iv_toolbar_primary);
-//    mSecondaryButton = findViewById(R.id.iv_toolbar_secondary);
-//    mProfileImageview=findViewById(R.id.iv_toolbar_icon);
-//    mToolbarTitle = findViewById(R.id.toolbar_title);
-//    mToggleButton = findViewById(R.id.tb_toggle);
-//    mTvToggleButtonStatus = findViewById(R.id.tv_toggle_status);
+    mToolbar = findViewById(R.id.echome_toolbar);
+    mPrimaryButton = findViewById(R.id.iv_toolbar_primary);
+    mSecondaryButton = findViewById(R.id.iv_toolbar_secondary);
+    mToolbarTitle = findViewById(R.id.toolbar_title);
   }
 
   /**
@@ -57,7 +54,7 @@ public abstract class F2CActivity extends AppCompatActivity implements ToolbarSe
   @Override
   public void setUpToolbar(String title, int titleImage, int primaryImage, int secondaryImage) {
     mToolbar.setVisibility(View.VISIBLE);
-   /* if (0 != primaryImage) {
+    if (0 != primaryImage) {
       mPrimaryButton.setVisibility(View.VISIBLE);
       mPrimaryButton.setImageResource(primaryImage);
     } else {
@@ -65,17 +62,13 @@ public abstract class F2CActivity extends AppCompatActivity implements ToolbarSe
     }
 
     if (0 != secondaryImage) {
-      if (R.raw.gifwithcolors == secondaryImage) {
-        Glide.with(this).asGif().load(R.raw.gifwithcolors).into(mSecondaryButton);
-      } else {
-        mSecondaryButton.setImageResource(secondaryImage);
-      }
+      mSecondaryButton.setImageResource(secondaryImage);
     } else {
       mSecondaryButton.setVisibility(View.GONE);
     }
 
     if (TextUtils.isEmpty(title)) {
-      mToolbarTitle.setText(EchoMeConstants.EMPTY_STRING);
+      mToolbarTitle.setText(F2CConstants.EMPTY_STRING);
     } else {
       mToolbarTitle.setText(title);
     }
@@ -88,26 +81,10 @@ public abstract class F2CActivity extends AppCompatActivity implements ToolbarSe
     }
 
     mToolbarTitle.setVisibility(View.VISIBLE);
-    mToggleButton.setVisibility(View.GONE);
-    mTvToggleButtonStatus.setVisibility(View.GONE);*/
+
     //mToolbarSearch.setVisibility(View.GONE);
   }
 
-  /**
-   * Method to add toggle button on tool bar
-   *
-   * @param isOn            to set if toggle is on
-   * @param isVisibleStatus
-   */
-  @Override
-  public void addToggleOnToolbar(boolean isOn, boolean isVisibleStatus) {
-    mToggleButton.setVisibility(View.VISIBLE);
-    if (isVisibleStatus) {
-      mTvToggleButtonStatus.setVisibility(View.VISIBLE);
-    }
-    mSecondaryButton.setVisibility(View.GONE);
-    mToggleButton.setChecked(isOn);
-  }
 
   /**
    * Method to add search layout to tool bar.

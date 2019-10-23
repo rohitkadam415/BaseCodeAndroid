@@ -34,8 +34,8 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.8.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
     implementation 'com.squareup:otto:1.3.8'
-  implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
     implementation project(':common')
-
-
+    implementation project(':presenter')
+    implementation project(':model')
 }
